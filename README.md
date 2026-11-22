@@ -23,6 +23,8 @@ Double-clicking the executable also brings back the control panel if window AI i
 
 The rails refer to the Windows symbol in the wallpaper. Free placement is also available. Mascots stay above the desktop and behind ordinary application windows. They are static illustrated poses. The renderer preserves transparent antialiased edges at the display's pixel density. The mouse wheel leaves control values alone.
 
+To see a newly added mascot, check **Show this mascot on desktop**, then minimize the controls and any windows covering the wallpaper.
+
 Settings save automatically in `%LOCALAPPDATA%\WindowDragon\settings.json`. If that folder is blocked, settings save in `data/settings.json` beside the executable. Older artwork choices migrate to the hand-drawn GPT, keeping their size and placement. Saved groups drop retired mascots and keep the rest of their layout. Launching the app again opens the existing instance's controls.
 
 ## Development

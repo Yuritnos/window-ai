@@ -340,7 +340,7 @@ class Controls(QWidget):
         heading = QLabel(APP_NAME)
         heading.setObjectName("heading")
         titles.addWidget(heading)
-        muted = QLabel("Little companions for your desktop.")
+        muted = QLabel("Minimize open windows to see your mascots.")
         muted.setObjectName("muted")
         titles.addWidget(muted)
         header.addLayout(titles)
@@ -541,14 +541,11 @@ class Companion(QObject):
         return (b.y - a.y) / (b.x - a.x)
 
     def check_desktop(self):
-        if self.desktop.enabled:
-            previous = self.desktop.parent_handle
-            ready = self.desktop.attach()
-            if ready and not self.desktop.keep_below_apps():
-                self.mascot.hide()
-                return
-            if ready and (previous != self.desktop.parent_handle or (self.pref.visible and not self.mascot.isVisible())):
+        if self.desktop.enabled and self.pref.visible:
+            if not self.mascot.isVisible():
                 self.apply()
+            else:
+                self.desktop.keep_below_apps()
 
     def apply(self):
         self.mascot.refresh_art()
@@ -556,13 +553,8 @@ class Companion(QObject):
         at = self.seat()
         anchor = self.mascot.frame.anchor
         origin = QPoint(round(at.x - anchor.x), round(at.y - anchor.y + self.pref.offset))
-        ready = self.desktop.attach()
-        if ready and self.pref.visible:
-            self.mascot.show()
-        else:
-            self.mascot.hide()
-        if ready:
-            self.desktop.place(origin, self.screen())
+        self.mascot.setVisible(self.pref.visible)
+        self.desktop.place(origin, self.screen())
         self.guide.refresh()
         if self.guide.isVisible():
             self.guide_layer.place(self.screen().geometry().topLeft(), self.screen())
@@ -620,9 +612,8 @@ class Companion(QObject):
 
     def toggle_guide(self, visible):
         self.guide.refresh()
-        ready = self.guide_layer.attach() if visible else False
-        self.guide.setVisible(visible and ready)
-        if ready:
+        self.guide.setVisible(visible)
+        if visible:
             self.guide_layer.place(self.screen().geometry().topLeft(), self.screen())
 
     def calibrate(self):
