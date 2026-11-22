@@ -1,0 +1,189 @@
+{
+  "gpt": {
+    "file": "sketch-seated.png",
+    "display_rect": [
+      151,
+      22,
+      884,
+      1257
+    ],
+    "seat": [
+      570,
+      1059
+    ],
+    "seat_line": [
+      [
+        355,
+        1059
+      ],
+      [
+        785,
+        1059
+      ]
+    ]
+  },
+  "claude": {
+    "file": "claude-reading-sideways.png",
+    "display_rect": [191, 13, 854, 1289],
+    "seat": [600, 1017],
+    "seat_line": [[400, 1017], [800, 1017]]
+  },
+  "deepseek": {
+    "file": "deepseek-waving.png",
+    "display_rect": [
+      113,
+      2,
+      1016,
+      1308
+    ],
+    "seat": [
+      560,
+      1000
+    ],
+    "seat_line": [
+      [
+        360,
+        1000
+      ],
+      [
+        760,
+        1000
+      ]
+    ]
+  },
+  "gemini": {
+    "file": "gemini-seated.png",
+    "display_rect": [
+      58,
+      3,
+      1030,
+      1371
+    ],
+    "seat": [
+      566,
+      1002
+    ],
+    "seat_line": [
+      [
+        366,
+        1002
+      ],
+      [
+        766,
+        1002
+      ]
+    ]
+  },
+  "glm": {
+    "file": "glm-seated-sideways.png",
+    "display_rect": [
+      70,
+      0,
+      1029,
+      1312
+    ],
+    "seat": [
+      560,
+      1030
+    ],
+    "seat_line": [
+      [
+        360,
+        1030
+      ],
+      [
+        760,
+        1030
+      ]
+    ],
+    "mirror": true
+  },
+  "grok": {
+    "file": "grok-seated.png",
+    "display_rect": [
+      61,
+      5,
+      1079,
+      1307
+    ],
+    "seat": [
+      550,
+      1047
+    ],
+    "seat_line": [
+      [
+        350,
+        1044
+      ],
+      [
+        750,
+        1050
+      ]
+    ]
+  },
+  "kimi": {
+    "file": "kimi-seated.png",
+    "display_rect": [
+      93,
+      5,
+      1001,
+      1339
+    ],
+    "seat": [
+      532,
+      1038
+    ],
+    "seat_line": [
+      [
+        332,
+        1032
+      ],
+      [
+        732,
+        1044
+      ]
+    ]
+  },
+  "qwen": {
+    "file": "qwen-seated.png",
+    "display_rect": [
+      157,
+      0,
+      900,
+      1312
+    ],
+    "seat": [
+      555,
+      1040
+    ],
+    "seat_line": [
+      [
+        355,
+        1034
+      ],
+      [
+        755,
+        1046
+      ]
+    ]
+  },
+  "hunyuan": {
+    "file": "hunyuan-seated.png",
+    "display_rect": [89, 2, 1008, 1305],
+    "seat": [550, 1018],
+    "seat_line": [[350, 1018], [750, 1018]]
+  },
+  "minimax": {
+    "file": "minimax-seated.png",
+    "display_rect": [126, 4, 803, 1396],
+    "seat": [508, 1050],
+    "seat_line": [[308, 1050], [708, 1050]],
+    "mirror": true
+  },
+  "stepfun": {
+    "file": "stepfun-seated.png",
+    "display_rect": [123, 5, 941, 1316],
+    "seat": [690, 1020],
+    "seat_line": [[490, 1020], [890, 1020]]
+  }
+}

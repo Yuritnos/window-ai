@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+build/
+build-wheels/
+dist/
+*.spec
+qa/*
+!qa/*.py
