@@ -40,10 +40,6 @@ py -3.13 -m venv .venv
 
 Validation: `python -m unittest discover -s tests -v`, `python qa/verify_controls.py`, and (after building) `python qa/verify_package.py`. The control checks exercise multiple real Qt windows and control signals; the packaged checks cover all characters, simultaneous desktop windows, persistence after restarting, portable settings fallback and ZIP integrity.
 
-The earlier sprites reference artwork by ZipZipPipe. [Pixiv art collection](https://www.pixiv.net/artworks/148186519) · [Bilibili showcase](https://www.bilibili.com/video/BV1tE9XBbErS/)
+All sprites except Step reference artwork by ZipZipPipe. [Pixiv art collection](https://www.pixiv.net/artworks/148186519) · [Bilibili showcase](https://www.bilibili.com/video/BV1tE9XBbErS/)
 
-The Hunyuan and MiniMax designs are by ZipZipPipe. The Step design is by 甶丶. All three sprites are seated adaptations. Source and usage details are recorded in `assets/artwork-provenance.json`.
-
-- Hunyuan by ZipZipPipe. [Bilibili post](https://www.bilibili.com/opus/1242184338245681157) · [Full-body portrait](https://github.com/HABAI182/ai-girls-atlas/blob/main/assets/zipzippipe/hunyuan/zipzippipe-pixiv-150718881-p03.jpg)
-- MiniMax by ZipZipPipe. [Pixiv gallery](https://www.pixiv.net/artworks/148186519) · [Full-body portrait](https://github.com/HABAI182/ai-girls-atlas/blob/main/assets/zipzippipe/minimax/zipzippipe-pixiv-148186519-p15.jpg)
 - Step by 甶丶. [Bilibili post](https://www.bilibili.com/opus/1250303372583501829) · [Full-body cube lantern portrait](https://xn--pssy23gqgbz2d718b.com/works/stepfun202609210001.html)
