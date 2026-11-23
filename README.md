@@ -1,6 +1,6 @@
 # window AI
 
-Eleven hand-drawn companions for the Windows desktop. Choose from GPT, Claude, DeepSeek, Gemini, GLM, Grok, Kimi, Qwen, Hunyuan, MiniMax and Step. Multiple mascots can stay on the desktop together, each with its own size, position, character, visibility and dragging lock.
+Fourteen hand-drawn companions for the Windows desktop. Choose from GPT, Claude, DeepSeek, Gemini, GLM, Grok, Kimi, Qwen, Hunyuan, MiniMax, Step, Mistral, 文心一言 and MiMo. Multiple mascots can stay on the desktop together, each with its own size, position, character, visibility and dragging lock.
 
 ## Start
 
@@ -25,7 +25,7 @@ The rails refer to the Windows symbol in the wallpaper. Free placement is also a
 
 To see a newly added mascot, check **Show this mascot on desktop**, then minimize the controls and any windows covering the wallpaper.
 
-Settings save automatically in `%LOCALAPPDATA%\WindowDragon\settings.json`. If that folder is blocked, settings save in `data/settings.json` beside the executable. Older artwork choices migrate to the hand-drawn GPT, keeping their size and placement. Saved groups drop retired mascots and keep the rest of their layout. Launching the app again opens the existing instance's controls.
+Settings save automatically in `%LOCALAPPDATA%\WindowDragon\settings.json`. If that folder is blocked, settings save in `data/settings.json` beside the executable. Older artwork choices migrate to the hand-drawn GPT, keeping their size and placement. Launching the app again opens the existing instance's controls.
 
 ## Development
 
@@ -42,6 +42,9 @@ py -3.13 -m venv .venv
 
 Validation: `python -m unittest discover -s tests -v`, `python qa/verify_controls.py`, and (after building) `python qa/verify_package.py`. The control checks exercise multiple real Qt windows and control signals; the packaged checks cover all characters, simultaneous desktop windows, persistence after restarting, portable settings fallback and ZIP integrity.
 
-All sprites except Step reference artwork by ZipZipPipe. [Pixiv art collection](https://www.pixiv.net/artworks/148186519) · [Bilibili showcase](https://www.bilibili.com/video/BV1tE9XBbErS/)
+Most sprites use ZipZipPipe artwork as their reference. [Pixiv art collection](https://www.pixiv.net/artworks/148186519) · [Bilibili showcase](https://www.bilibili.com/video/BV1tE9XBbErS/)
 
 - Step by 甶丶. [Bilibili post](https://www.bilibili.com/opus/1250303372583501829) · [Full-body cube lantern portrait](https://xn--pssy23gqgbz2d718b.com/works/stepfun202609210001.html)
+- Mistral by ZipZipPipe. [Bilibili portrait collection](https://www.bilibili.com/opus/1236803362705375305)
+- 文心一言 by ZipZipPipe. [Full-body portrait source](https://selinlee.github.io/ai-moe-atlas/en/characters/zipzippipe-ernie/)
+- MiMo by 甶丶, CC BY-NC. [Bilibili portrait](https://www.bilibili.com/opus/1242097128919007239) · [Full-body portrait and creator credit](https://xn--pssy23gqgbz2d718b.com/works/mimo202609230001.html)

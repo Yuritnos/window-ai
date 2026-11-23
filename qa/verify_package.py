@@ -58,13 +58,12 @@ records = [MascotRecord('group-' + skin, Preferences(skin=skin, height=height, e
                ('gemini', 78, 'middle', .15), ('glm', 72, 'lower', .1), ('grok', 81, 'middle', .48),
                ('kimi', 93, 'middle', .85), ('qwen', 76, 'lower', .9),
                ('hunyuan', 87, 'upper', .35), ('minimax', 102, 'middle', .68),
-               ('stepfun', 110, 'lower', .72),
+               ('stepfun', 110, 'lower', .72), ('mistral', 100, 'upper', .57),
+               ('wenxin', 94, 'middle', .31), ('mimo', 86, 'lower', .34),
            ]]
 assert {record.preferences.skin for record in records} == set(CHARACTER_LABELS)
-retired = [MascotRecord('old-' + skin, Preferences(skin=skin))
-           for skin in ('mistral', 'wenxin', 'mimo')]
-session = SessionPreferences(records, records[0].id)
-save_session(folder / 'settings.json', SessionPreferences(retired + records, retired[0].id))
+session = SessionPreferences(records, 'group-wenxin')
+save_session(folder / 'settings.json', session)
 for attempt in range(2):
     status = launch(folder, show_controls=attempt == 0)
     assert status['count'] == len(records) and status['selected_id'] == session.selected_id

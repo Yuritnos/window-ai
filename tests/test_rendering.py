@@ -45,23 +45,24 @@ class RenderingTests(unittest.TestCase):
             self.assertEqual(pref.offset, 0)
             self.assertEqual((pref.height, pref.position, pref.skin), (158, .629, "gpt"))
 
-    def test_session_with_only_removed_mascots_starts_with_one_gpt(self):
+    def test_saved_sessions_restore_the_three_characters(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "settings.json"
+            skins = ("mistral", "wenxin", "mimo")
             path.write_text(json.dumps({
                 "selected_id": "old-wenxin",
                 "mascots": [{"id": f"old-{skin}", "preferences": {"skin": skin}}
-                            for skin in ("mistral", "wenxin", "mimo")],
+                            for skin in skins],
             }), encoding="utf-8")
             session = load_session(path)
-            self.assertEqual([record.preferences.skin for record in session.mascots], ["gpt"])
-            self.assertEqual(session.selected_id, session.mascots[0].id)
+            self.assertEqual([record.preferences.skin for record in session.mascots], list(skins))
+            self.assertEqual(session.selected().preferences.skin, "wenxin")
 
     def test_all_hand_drawn_characters_are_active(self):
         assets = Path(__file__).resolve().parents[1] / "assets"
         metadata = json.loads((assets / "artwork.json").read_text(encoding="utf-8"))
         self.assertEqual(set(metadata), set(CHARACTER_LABELS))
-        self.assertEqual(len(metadata), 11)
+        self.assertEqual(len(metadata), 14)
         self.assertEqual(metadata["gpt"]["file"], "sketch-seated.png")
         self.assertEqual(metadata["claude"]["file"], "claude-reading-sideways.png")
         self.assertEqual(metadata["glm"]["file"], "glm-seated-sideways.png")
@@ -70,6 +71,7 @@ class RenderingTests(unittest.TestCase):
         self.assertEqual(metadata["hunyuan"]["file"], "hunyuan-seated.png")
         self.assertEqual(metadata["minimax"]["file"], "minimax-seated.png")
         self.assertEqual(metadata["stepfun"]["file"], "stepfun-seated.png")
+        self.assertTrue(metadata["mistral"]["mirror"])
         self.assertFalse(list(assets.glob("*pixel*")))
 
 

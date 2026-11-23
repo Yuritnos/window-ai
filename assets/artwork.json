@@ -185,5 +185,24 @@
     "display_rect": [123, 5, 941, 1316],
     "seat": [690, 1020],
     "seat_line": [[490, 1020], [890, 1020]]
+  },
+  "mistral": {
+    "file": "mistral-seated.png",
+    "display_rect": [58, 5, 972, 1307],
+    "seat": [535, 1070],
+    "seat_line": [[335, 1070], [735, 1070]],
+    "mirror": true
+  },
+  "wenxin": {
+    "file": "wenxin-seated.png",
+    "display_rect": [194, 3, 882, 1309],
+    "seat": [632, 1065],
+    "seat_line": [[432, 1065], [832, 1065]]
+  },
+  "mimo": {
+    "file": "mimo-seated.png",
+    "display_rect": [124, 72, 953, 1133],
+    "seat": [669, 931],
+    "seat_line": [[469, 931], [869, 931]]
   }
 }

@@ -22,8 +22,10 @@ CHARACTER_LABELS = {
     "hunyuan": "Hunyuan",
     "minimax": "MiniMax",
     "stepfun": "Step",
+    "mistral": "Mistral",
+    "wenxin": "文心一言",
+    "mimo": "MiMo",
 }
-REMOVED_SKINS = ("mistral", "wenxin", "mimo")
 
 
 def configuration_directory(explicit: str | None, portable_root: Path) -> Path:
@@ -131,8 +133,6 @@ def load_session(path: Path) -> SessionPreferences:
                 if not isinstance(value, dict) or not isinstance(value.get("preferences"), dict):
                     continue
                 preferences = value["preferences"]
-                if preferences.get("skin") in REMOVED_SKINS:
-                    continue
                 key = value.get("id")
                 if not isinstance(key, str) or not key or key in used or len(key) > 128:
                     key = uuid.uuid4().hex
