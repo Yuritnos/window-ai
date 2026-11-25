@@ -1,6 +1,6 @@
 # window AI
 
-Fourteen hand-drawn companions for the Windows desktop. Choose from GPT, Claude, DeepSeek, Gemini, GLM, Grok, Kimi, Qwen, Hunyuan, MiniMax, Step, Mistral, 文心一言 and MiMo. Multiple mascots can stay on the desktop together, each with its own size, position, character, visibility and dragging lock.
+Fourteen AI mascots for the Windows desktop. Choose from GPT, Claude, DeepSeek, Gemini, GLM, Grok, Kimi, Qwen, Hunyuan, MiniMax, Step, Mistral, 文心一言 and MiMo. Multiple mascots can stay on the desktop together, each with its own size, position, character, visibility and dragging lock.
 
 ## Start
 
